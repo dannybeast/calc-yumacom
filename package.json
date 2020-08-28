@@ -1,0 +1,73 @@
+{
+  "name": "Rif",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./config/webpack.dev.conf.js",
+    "build": "webpack --config ./config/webpack.build.conf.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add ."
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.7.1",
+    "autoresize-textarea": "^1.1.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^4.0.0-beta.8",
+    "husky": "^4.0.7",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-svgo": "^4.0.2",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.0",
+    "smart-grid": "^2.1.2",
+    "style-loader": "^1.0.0",
+    "svg-sprite-loader": "^4.1.6",
+    "svgo": "^1.3.2",
+    "svgo-loader": "^2.2.1",
+    "terser-webpack-plugin": "^2.3.2",
+    "vue-loader": "^15.7.2",
+    "dotenv": "^8.2.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "script-loader": "^0.7.2",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "autosize": "^4.0.2",
+    "swiper": "^5.3.0",
+    "emergence.js": "^1.1.2",
+    "imask": "^6.0.1",
+    "jquery": "^3.4.1",
+    "lazyload": "^2.0.0-rc.2",
+    "sass-em": "^1.0.3",
+    "vue": "^2.6.10",
+    "webpack-svgstore-plugin": "^4.1.0"
+  }
+}

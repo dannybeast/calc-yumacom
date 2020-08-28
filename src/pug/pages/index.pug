@@ -1,0 +1,307 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Расчет столешниц, панелей и фасадов';
+    - var description = '';
+    - var pageName = 'index';
+
+
+block content
+    // WEBSITE
+    +b.content.page-index
+      
+        +b.HEADER.header
+            .container
+                +e.A(href="/" class="logo")
+                    img(src='http://calc.yumacom.ru/content/site/images/main_logo.svg')
+                +e.P.slogan Расчет столешниц,<br> панелей и фасадов
+                +e.NAV.nav
+                    ul
+                        li.active
+                            a(href='/fasad') Фасад
+                        li
+                            a(href='/stoleshnica') Столешница
+                        li
+                            a(href='/stenovaya-panelj') Стеновая панель
+                        
+                +e.profile-menu   
+                    +e.profile-icon
+                        svg.svg-icon
+                            use(href='assets/icons/sprite.svg#icon-user')
+                    div
+                        +e.A(class="username" href='mailto:vyacheslav.tyurikov@gmail.com') vyacheslav.tyurikov@gmail.com
+                        ul
+                            li          
+                                a(href='#') Мои заказы
+                            li            
+                                a(href='#') Выход
+        
+        .container
+            +b.breadcrumbs
+            
+                a.breadcrumbs__link(href='/') Главная
+                span.breadcrumbs__arrow
+                a.breadcrumbs__link(href='/fasad') Фасад
+                span.breadcrumbs__arrow
+                span Ровный
+        +b.SECTION
+            .container
+                +b.H1.title Ровный
+        
+        +b.SECTION.items
+            .container
+                +e.row
+                    +e.col-50
+                        +b.A(href="#").item
+                            +e.image
+                                img(src="assets/images/img.jpg", alt="")
+                            +e.P.title Рамочный
+                    +e.col-50
+                        +b.A(href="#").item
+                            +e.image
+                                img(src="assets/images/img.jpg", alt="")
+                            +e.P.title Рамочный
+                +e.row
+                    +e.col
+                        +b.A(href="#").item
+                            +e.image
+                                img(src="assets/images/img.jpg", alt="")
+                            +e.P.title Рамочный
+                    +e.col
+                        +b.A(href="#").item
+                            +e.image
+                                img(src="assets/images/img.jpg", alt="")
+                            +e.P.title Рамочный
+                    +e.col
+                        +b.A(href="#").item
+                            +e.image
+                                img(src="assets/images/img.jpg", alt="")
+                            +e.P.title Рамочный
+                    +e.col
+                        +b.A(href="#").item
+                            +e.image
+                                img(src="assets/images/img.jpg", alt="")
+                            +e.P.title Рамочный
+
+        +b.SECTION
+            .container
+                +b.UL.files
+                    li
+                        +b.A(class="file" href="#" download)
+                            +e.icon
+                                img(src="assets/icons/file.svg", alt="")
+                            +e.name Название файла.pdf <span>(20Kb)</span>
+                    li
+                        +b.A(class="file" href="#" download)
+                            +e.icon
+                                img(src="assets/icons/file.svg", alt="")
+                            +e.name Название файла.pdf <span>(20Kb)</span>
+                    li
+                        +b.A(class="file" href="#" download)
+                            +e.icon
+                                img(src="assets/icons/file.svg", alt="")
+                            +e.name Название файла.pdf <span>(20Kb)</span>
+        +b.SECTION
+            .container
+                    table.order-table
+                        tbody
+                            tr
+                                th(colspan='13') Деталировка
+                                th(colspan='4') Присадка под петли
+                                th  
+                            tr
+                                // деталировка
+                                td №
+                                td Основа
+                                td Декор
+                                td Тип кромки
+                                td Кромка
+                                td Обратка
+                                td Текстура
+                                td Ширина, мм
+                                td Высота, мм
+                                td Ко-во
+                                td Площадь, м2
+                                td Вес, кг
+                                td Стоимость, руб
+                                // присадка под петли
+                                td Место
+                                td Расстояние от края
+                                td Ко-во
+                                td Стоимость, руб
+                                td
+                            tr
+                                td 1
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                // присадка под петли
+                                td -
+                                td -
+                                td -
+                                td -
+                                td 
+                                    +b.circle-button.create-button
+                                        svg.svg-icon
+                                            use(href='assets/icons/sprite.svg#icon-create')
+                                        +e.UL.dropdown
+                                            li
+                                                a Копировать
+                                            li
+                                                a() Изменить
+                                            li
+                                                a() Удалить
+                           
+                            tr
+                                td 2
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                td -
+                                // присадка под петли
+                                td -
+                                td -
+                                td -
+                                td -
+                                td 
+                                    +b.circle-button.create-button
+                                        svg.svg-icon
+                                            use(href='assets/icons/sprite.svg#icon-create')
+                                        +e.UL.dropdown
+                                            li
+                                                a Копировать
+                                            li
+                                                a() Изменить
+                                            li
+                                                a() Удалить
+        +b.SECTION
+            .container
+                    +b.form-fields
+                        +e.row
+                            +e.col
+                                +b.field
+                                    label Основа:
+                                    +b.LABEL.select
+                                        select
+                                            option ДСП 16 мм
+                                            option МДФ 16 мм
+                            +e.col
+                                +b.field(class="--error")
+                                    label Цвет пластика: 
+                                    +b.select-color.js-choose-color(data-modal="choose-color")
+                                        a(href='#') Выбрать цвет
+                                        img(src='assets/images/color-dummy.png', alt='')
+                                        input(type='hidden', name='', value='')
+                            +e.col
+                                +b.field
+                                    label Ширина*, мм: 
+                                    input(type='text', name='', value='')
+                            +e.col
+                                +b.field
+                                    label  Высота*, мм: 
+                                    input(type='text', name='', value='')
+                                    p.messages * с учетом кромки
+                        +e.row
+                            +e.col
+                                +b.field
+                                    label Тип кромки:
+                                    +b.LABEL.select
+                                        select
+                                            option ПВХ / ABS
+                                            option Пластик в цвет
+                                            option Laser
+                            +e.col
+                                +b.field
+                                    label Цвет кромки: 
+                                    +b.select-color.js-choose-color(data-modal="choose-edge-color")
+                                        a(href='#') Выбрать цвет
+                                        img(src='assets/images/color-dummy.png', alt='')
+                                        input(type='hidden', name='', value='')
+                        
+                            +e.col
+                                +b.field
+                                    label Обратная сторона фасада:
+                                    +b.LABEL.select
+                                        select
+                                            option Белая
+                                            option Пластик в цвет лицевой стороны
+                            +e.col
+                                +b.field
+                                    label Присадка под петли:
+                                    +b.LABEL.select
+                                        select
+                                            option Справа / слева
+                                            option Сверху / снизу
+                        +e.row
+                            
+                            +e.col
+                                +b.field
+                                    label Количество:
+                                    +b.LABEL.select
+                                        select
+                                            option 2
+                                            option 3
+                                            option 4
+                                            option 5
+                            +e.col
+                                +b.field
+                                    label Расстояние от края:
+                                    +e.select-and-input
+                                        +b.LABEL.select
+                                            select.js-show-input
+                                                option 100
+                                                option 150
+                                                option(name="unique") Индивидуальный выбор
+                                        +e.group
+                                            input(type='number', name='', value='' placeholder="Введите расстояние")
+                                            +e.cross
+                                                svg.svg-icon
+                                                    use(href='assets/icons/sprite.svg#icon-cross2')
+                            +e.col
+                                +b.field
+                                    label Направление текстуры:
+                                    +b.LABEL.select
+                                        select
+                                            option Горизонтальная
+                                            option Вертикальная
+                            +e.col
+                        +e.row
+                            +e.col
+                                +b.price-module  
+                                    p Стоимость фасадов: <strong>9300.00 руб.</strong>
+                                    p Стоимость присадок: <strong>300.00 руб.</strong>
+                                    p Итого: <strong>9600.00 руб.</strong>
+                                    p Площадь: <strong>17 м2</strong>
+                                    p Вес: <strong>7 кг</strong>
+                        +e.row
+                            +e.col
+                                +b.BUTTON.btn(class="--primary") Добавить в заказ
+        +b.FOOTER.footer
+            .container
+                +e.P.copyright 2020 © ЮМАКОМ
+                +e.UL.nav
+                    li
+                        a(href='/poljzovateljskoe-soglashenie') Пользовательское соглашение
+                    li
+                        a(href='/politika-konfidencialjnosti') Политика конфиденциальности
+
+        
+block script
+    script(src="assets/js/app.js")

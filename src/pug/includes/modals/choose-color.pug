@@ -1,0 +1,34 @@
+#choose-color.modal
+  +b.modal-inner(class="--lg")
+    +e.close.js-close-modal
+      svg.svg-icon
+        use(href='assets/icons/sprite.svg#icon-cross')
+    +b.choose-color
+      +e.H3.title Выбрать цвет пластика
+      +e.FORM.search
+        input(type="text" placeholder="Введите название цвета")
+      +e.content
+        mixin color()
+            li(class="js-color-item" data-id="1")
+              img(src="assets/images/color-dummy.png", alt="")
+              p Серый металлик
+            li(class="js-color-item" data-id="2")
+              img(src="assets/images/color-dummy-green.png", alt="")
+              p Зеленый лес
+        +e.collection
+          +e.H4.collection-title Коллекция 1
+          ul
+            +color()
+            +color()
+            +color()
+            +color()
+            +color()
+        +e.collection
+          +e.H4.collection-title Коллекция 2
+          ul
+            +color()
+            +color()
+            +color()
+            +color()
+            +color()
+            +color()

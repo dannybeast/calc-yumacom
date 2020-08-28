@@ -1,0 +1,55 @@
+// footer style
+.footer {
+  position: relative;
+  background: #fff;
+  border-top: 1px solid $border-base;
+  border-bottom: 1px solid $border-base;
+  $parent: &;
+  .container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sm-block() {
+      flex-wrap: wrap;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    @include sm-block() {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    li {
+      margin-right: 30px;
+      @include sm-block() {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      color: $neutral-regular;
+      text-decoration: underline;
+      font-size: 12px;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  &__copyright {
+    font-size: 13px;
+    color: #545454;
+    @include sm-block() {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}
