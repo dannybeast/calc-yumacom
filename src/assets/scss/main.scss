@@ -88,11 +88,17 @@ body {
       display: block;
     }
   }
+  &.is-visible-edit-buttons {
+    .edit-buttons-td {
+      display: table-cell;
+    }
+  }
 }
 
 .add-button,
 .section-table,
-.section-form {
+.section-form,
+.edit-buttons-td {
   display: none;
 }
 
@@ -543,6 +549,31 @@ section,
       img {
         width: 100%;
         margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.edit-buttons {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 22px;
+    height: 21px;
+    fill: #383838;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: solid 1px #ddd;
+    width: 35px;
+    height: 35px;
+    margin-right: -1px;
+    &:hover {
+      svg {
+        fill: $primary-color;
       }
     }
   }

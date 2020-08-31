@@ -11,7 +11,7 @@ block content
     +b.content.page-index
       
         +b.HEADER.header
-            .container
+            .container-fluid
                 +e.A(href="/" class="logo")
                     img(src='http://calc.yumacom.ru/content/site/images/main_logo.svg')
                 +e.P.slogan Расчет столешниц,<br> панелей и фасадов
@@ -36,7 +36,7 @@ block content
                             li            
                                 a(href='#') Выход
         
-        .container
+        .container-fluid
             +b.breadcrumbs
             
                 a.breadcrumbs__link(href='/') Главная
@@ -45,11 +45,11 @@ block content
                 span.breadcrumbs__arrow
                 span Ровный
         +b.SECTION
-            .container
+            .container-fluid
                 +b.H1.title Ровный
         
         +b.SECTION.items
-            .container
+            .container-fluid
                 +e.row
                     +e.col-50
                         +b.A(href="#").item
@@ -84,7 +84,7 @@ block content
                             +e.P.title Рамочный
 
         +b.SECTION
-            .container
+            .container-fluid
                 +b.UL.files
                     li
                         +b.A(class="file" href="#" download)
@@ -102,7 +102,7 @@ block content
                                 img(src="assets/icons/file.svg", alt="")
                             +e.name Название файла.pdf <span>(20Kb)</span>
         +b.SECTION
-            .container
+            .container-fluid
                     table.order-table
                         tbody
                             tr
@@ -129,7 +129,7 @@ block content
                                 td Расстояние от края
                                 td Ко-во
                                 td Стоимость, руб
-                                td
+                                td.edit-buttons-td
                             tr
                                 td 1
                                 td -
@@ -180,19 +180,30 @@ block content
                                 td -
                                 td -
                                 td -
-                                td 
-                                    +b.circle-button.create-button
-                                        svg.svg-icon
-                                            use(href='assets/icons/sprite.svg#icon-create')
-                                        +e.UL.dropdown
-                                            li
-                                                a Копировать
-                                            li
-                                                a() Изменить
-                                            li
-                                                a() Удалить
+                                td.edit-buttons-td
+                                    +b.edit-buttons
+                                        a(href="#" title="Копировать")
+                                            svg.svg-icon
+                                                use(href='assets/icons/sprite.svg#icon-copy')
+                                        a(href="#" title="Изменить")
+                                            svg.svg-icon
+                                                use(href='assets/icons/sprite.svg#icon-edit')
+                                        a(href="#" title="Удалить")
+                                            svg.svg-icon
+                                                use(href='assets/icons/sprite.svg#icon-delete')
+                                   
+                                    //- +b.circle-button.create-button
+                                    //-     svg.svg-icon
+                                    //-         use(href='assets/icons/sprite.svg#icon-create')
+                                    //-     +e.UL.dropdown
+                                    //-         li
+                                    //-             a Копировать
+                                    //-         li
+                                    //-             a() Изменить
+                                    //-         li
+                                    //-             a() Удалить
         +b.SECTION
-            .container
+            .container-fluid
                     +b.form-fields
                         +e.row
                             +e.col
@@ -294,7 +305,7 @@ block content
                             +e.col
                                 +b.BUTTON.btn(class="--primary") Добавить в заказ
         +b.FOOTER.footer
-            .container
+            .container-fluid
                 +e.P.copyright 2020 © ЮМАКОМ
                 +e.UL.nav
                     li

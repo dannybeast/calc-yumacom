@@ -42,6 +42,16 @@
       color: #fff;
     }
   }
+  &--gray {
+    border: solid 2px #ccc;
+    background-color: #ccc;
+    color: #000;
+    &:hover {
+      background-color: darken(#ccc, 10%);
+      border-color: darken(#ccc, 10%);
+      color: #000;
+    }
+  }
   &--line-primary {
     border: solid 2px $primary-color;
     background-color: transparent;

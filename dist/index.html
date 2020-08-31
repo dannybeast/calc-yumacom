@@ -14,7 +14,7 @@
       <!-- WEBSITE-->
       <div class="content page-index">
         <header class="header">
-          <div class="container"><a class="header__logo" href="/"><img src="http://calc.yumacom.ru/content/site/images/main_logo.svg"></a>
+          <div class="container-fluid"><a class="header__logo" href="/"><img src="http://calc.yumacom.ru/content/site/images/main_logo.svg"></a>
             <p class="header__slogan">Расчет столешниц,<br> панелей и фасадов
             </p>
             <nav class="header__nav">
@@ -39,18 +39,18 @@
             </div>
           </div>
         </header>
-        <div class="container">
+        <div class="container-fluid">
           <div class="breadcrumbs"><a class="breadcrumbs__link" href="/">Главная</a><span class="breadcrumbs__arrow"></span><a class="breadcrumbs__link" href="/fasad">Фасад</a><span class="breadcrumbs__arrow"></span><span>Ровный</span>
           </div>
         </div>
         <section>
-          <div class="container">
+          <div class="container-fluid">
             <h1 class="title">Ровный
             </h1>
           </div>
         </section>
         <section class="items">
-          <div class="container">
+          <div class="container-fluid">
             <div class="items__row">
               <div class="items__col-50"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
                 <p class="item__title">Рамочный
@@ -82,7 +82,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="container-fluid">
             <ul class="files">
               <li><li><a class="file" href="#" download="download"><span class="file__icon"><img src="assets/icons/file.svg" alt=""></span><span class="file__name">Название файла.pdf <span>(20Kb)</span></span></a></li>
               </li>
@@ -94,7 +94,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="container-fluid">
             <table class="order-table">
               <tbody>
                 <tr>
@@ -122,7 +122,7 @@
                   <td>Расстояние от края</td>
                   <td>Ко-во</td>
                   <td>Стоимость, руб</td>
-                  <td></td>
+                  <td class="edit-buttons-td"></td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -175,16 +175,17 @@
                   <td>-</td>
                   <td>-</td>
                   <td>-</td>
-                  <td> 
-                    <div class="circle-button create-button">
-                      <svg class="svg-icon">
-                        <use href="assets/icons/sprite.svg#icon-create"></use>
-                      </svg>
-                      <ul class="circle-button__dropdown">
-                        <li><a>Копировать</a></li>
-                        <li><a>Изменить</a></li>
-                        <li><a>Удалить</a></li>
-                      </ul>
+                  <td class="edit-buttons-td">
+                    <div class="edit-buttons"><a href="#" title="Копировать">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-copy"></use>
+                        </svg></a><a href="#" title="Изменить">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-edit"></use>
+                        </svg></a><a href="#" title="Удалить">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-delete"></use>
+                        </svg></a>
                     </div>
                   </td>
                 </tr>
@@ -193,7 +194,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="container-fluid">
             <div class="form-fields">
               <div class="form-fields__row">
                 <div class="form-fields__col">
@@ -344,7 +345,7 @@
           </div>
         </section>
         <footer class="footer">
-          <div class="container">
+          <div class="container-fluid">
             <p class="footer__copyright">2020 © ЮМАКОМ
             </p>
             <ul class="footer__nav">

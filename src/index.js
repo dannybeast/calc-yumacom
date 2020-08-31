@@ -20,6 +20,8 @@ import Modal from "./js/modules/modals";
 //import masks from "./js/modules/inputmasks";
 //import Notice from "./js/modules/notifications";
 
+import search from "./js/modules/search";
+
 document.addEventListener("DOMContentLoaded", function() {
   let modal = new Modal();
   mobileNavigation();
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     e.preventDefault();
     currentColorField = $(this);
     modal.openModal(modalId);
+    search();
   });
 
   $(".js-color-item").click(function() {
