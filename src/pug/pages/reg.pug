@@ -1,0 +1,79 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Расчет столешниц, панелей и фасадов';
+    - var description = '';
+    - var pageName = 'sign';
+
+
+block content
+    // WEBSITE
+    +b.content
+        +b.HEADER.header
+            .container-fluid
+                +e.A(href="/" class="logo")
+                    img(src='http://calc.yumacom.ru/content/site/images/main_logo.svg')
+                +e.P.slogan Расчет столешниц,<br> панелей и фасадов
+                +e.NAV.nav
+                    ul
+                        li.active
+                            a(href='/fasad') Фасад
+                        li
+                            a(href='/stoleshnica') Столешница
+                        li
+                            a(href='/stenovaya-panelj') Стеновая панель
+                        
+                +e.profile-menu   
+                    +e.profile-icon
+                        svg.svg-icon
+                            use(href='assets/icons/sprite.svg#icon-user')
+                    div
+                        +e.A(class="username" href='mailto:vyacheslav.tyurikov@gmail.com') vyacheslav.tyurikov@gmail.com
+                        ul
+                            li          
+                                a(href='#') Мои заказы
+                            li            
+                                a(href='#') Выход
+
+        
+        +b.auth-module
+            +e.FORM.form
+                +e.H3.title Регистрация
+                // .field--error
+                +b.field
+                    label ФИО
+                    input(type="text" )
+                +b.field
+                    label Телефон
+                    input(type="text" )
+                +b.field
+                    label E-mail
+                    input(type="text" )
+                +b.field
+                    label ИНН
+                    input(type="text" )
+                +b.field
+                    label Организация 
+                    input(type="text" disabled)
+
+                +e.buttons
+                    +b.BUTTON.btn(class="--primary") Регистрация
+                    ul
+                        
+                        li
+                            a(href="sign.html") Войти
+                        li
+                            a(href="forgot.html") Восстановить пароль
+
+        +b.FOOTER.footer
+            .container-fluid
+                +e.P.copyright 2020 © ЮМАКОМ
+                +e.UL.nav
+                    li
+                        a(href='/poljzovateljskoe-soglashenie') Пользовательское соглашение
+                    li
+                        a(href='/politika-konfidencialjnosti') Политика конфиденциальности
+
+        
+block script
+    script(src="assets/js/app.js")

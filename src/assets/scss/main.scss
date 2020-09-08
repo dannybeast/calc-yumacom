@@ -348,6 +348,15 @@ section,
 .color-box {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  span {
+    max-width: 110px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   img {
     display: block;
     margin-right: 5px;
@@ -368,6 +377,7 @@ section,
     }
   }
 }
+
 .order-table {
   input[type="number"] {
     padding-left: 5px;
@@ -581,6 +591,114 @@ section,
       svg {
         fill: $primary-color;
       }
+    }
+  }
+}
+
+.auth-module {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 0;
+  $parent: &;
+  @include sm-block() {
+    flex-wrap: wrap;
+    border-radius: 0;
+  }
+  .field {
+    margin-bottom: 10px;
+    label {
+      font-size: 14px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sm-block() {
+      flex-wrap: wrap;
+    }
+    .btn {
+      border-width: 2px;
+    }
+    ul {
+      @include sm-block() {
+        width: 100%;
+        margin-top: 30px;
+      }
+      a {
+        font-size: 14px;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+      li {
+        display: inline-block;
+        margin-left: 30px;
+        @include sm-block() {
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  &__form {
+    width: 65%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px 40px;
+    box-shadow: 0 0 20px #00000024;
+    @include md-block() {
+      padding: 30px;
+      width: 60%;
+    }
+    @include sm-block() {
+      width: 100%;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 37px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 30px;
+    @include sm-block() {
+      font-size: 26px;
+    }
+  }
+  &__content {
+    width: 35%;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include md-block() {
+      padding: 30px;
+      width: 40%;
+    }
+    @include sm-block() {
+      width: 100%;
+    }
+  }
+
+  &--not-content {
+    max-width: 650px;
+
+    #{$parent}__form {
+      width: 100%;
+    }
+    #{$parent}__buttons {
+      justify-content: space-between;
     }
   }
 }
