@@ -200,14 +200,16 @@ li {
 @mixin tableStyle {
   table {
     width: 100%;
-
+    input {
+      height: 35px;
+    }
     td,
     th {
       font-weight: 400;
-      border-bottom: solid 1px #eaebec;
+      border-bottom: solid 1px #ccc;
       padding: 10px 5px;
       font-size: 13px;
-      vertical-align: unset;
+      vertical-align: middle;
 
       &:first-child {
         padding-left: 0;

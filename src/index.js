@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
   let modal = new Modal();
   mobileNavigation();
 
+  //$(".js-fancybox").fancybox();
+
   // .js-choose-color
   let currentColorField;
   $(".js-choose-color").click(function(e) {

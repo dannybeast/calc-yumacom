@@ -93,6 +93,11 @@ body {
       display: table-cell;
     }
   }
+  &.is-hide-search-modal {
+    .choose-color__search {
+      display: none;
+    }
+  }
 }
 
 .add-button,
@@ -341,9 +346,11 @@ section,
   }
 }
 .color-box {
+  display: flex;
+  align-items: center;
   img {
     display: block;
-    margin-bottom: 3px;
+    margin-right: 5px;
   }
 }
 .page-top {
@@ -364,6 +371,7 @@ section,
 .order-table {
   input[type="number"] {
     padding-left: 5px;
+    height: 35px;
   }
   tr {
     &:nth-child(2) {
@@ -567,10 +575,8 @@ section,
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: solid 1px #ddd;
-    width: 35px;
-    height: 35px;
-    margin-right: -1px;
+    width: 40px;
+    height: 40px;
     &:hover {
       svg {
         fill: $primary-color;

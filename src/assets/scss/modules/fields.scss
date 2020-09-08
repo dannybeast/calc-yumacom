@@ -339,4 +339,8 @@ input::-webkit-inner-spin-button {
     margin-right: 15px;
     border: solid 1px $field-border-color;
   }
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
