@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   $(".js-color-item").click(function() {
+    let minHeight = $(this).data("min-height");
+    let maxHeight = $(this).data("max-width");
+    let minWidth = $(this).data("min-width");
+    let maxWidth = $(this).data("max-width");
+
     let colorName = $(this)
       .find("p")
       .text();
@@ -50,6 +55,14 @@ document.addEventListener("DOMContentLoaded", function() {
     currentColorField.find("img").attr("src", colorImg);
     currentColorField.find("input").val(colorId);
     currentColorField.parents(".field").removeClass("field--error");
+
+    if (minHeight || minWidth || maxHeight || maxWidth) {
+      $("#js-width").attr("min", minWidth);
+      $("#js-width").attr("max", maxWidth);
+      $("#js-height").attr("min", minHeight);
+      $("#js-height").attr("max", maxHeight);
+    }
+
     modal.hideModal();
   });
   //-
