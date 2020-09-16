@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   $(".js-color-item").click(function() {
     let minHeight = $(this).data("min-height");
-    let maxHeight = $(this).data("max-width");
+    let maxHeight = $(this).data("max-height");
     let minWidth = $(this).data("min-width");
     let maxWidth = $(this).data("max-width");
 
