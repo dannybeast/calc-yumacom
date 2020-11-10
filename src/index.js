@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let colorId = $(this).data("id");
     currentColorField.find("a").text(colorName);
     currentColorField.find("img").attr("src", colorImg);
-    currentColorField.find("input").val(colorId);
+    currentColorField.find("input").val(colorId).trigger('change');
+    getSuitable(currentColorField.find("input"));
     currentColorField.parents(".field").removeClass("field--error");
 
     if (minHeight || minWidth || maxHeight || maxWidth) {
@@ -65,6 +66,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     modal.hideModal();
   });
+
+
+  function getSuitable(input){
+    var id = input.val();
+        
+        $.post(
+            "/utility/get-suitable-edges",
+            { plastic_color: id },
+            function (result) {
+                $('suitable-edges').empty();
+
+                $(result).each(function (edge) {
+                    var item = `<li class="js-color-item" data-id="${edge.ID}">
+                            <img src="${edge.Image}?w=210&=210&mode=crop&scale=both">
+                            <p>${edge.Name}</p>
+                            <p>${edge.Description}</p>
+                        </li>`;
+
+                    $('suitable-edges').append(item);
+                });
+            });
+  }
   //-
 
   // js-show-input
