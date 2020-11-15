@@ -21,7 +21,12 @@ export default function(){
 
     // Рисование прямоугольника
     function drawBlock(){
-        var path = draw.path('M2900,600H100C44.8,600,0,555.2,0,500V100C0,44.8,44.8,0,100,0h2800c55.2,0,100,44.8,100,100v400C3000,555.2,2955.2,600,2900,600z').attr({ fill: color })
+        var path = draw.path(`
+        M 0 0 
+        L ${width} 0 
+        L ${width} ${height} 
+        L 0 ${height} 
+        Z`).attr({ fill: color })
     }
 
     // Рисование дувого верхнего угла

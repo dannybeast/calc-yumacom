@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Расчет столешниц, панелей и фасадов</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="loader"><img src="assets/images/spinner.svg" alt=""></div>
+    <main class="wrapper" id="app">
+      <!-- WEBSITE-->
+      <div class="content page-index">
+        <header class="header">
+          <div class="container-fluid"><a class="header__logo" href="/"><img src="http://calc.yumacom.ru/content/site/images/main_logo.svg"></a>
+            <p class="header__slogan">Расчет столешниц,<br> панелей и фасадов
+            </p>
+            <nav class="header__nav">
+              <ul>
+                <li class="active"><a href="/fasad">Фасад</a></li>
+                <li><a href="/stoleshnica">Столешница</a></li>
+                <li><a href="/stenovaya-panelj">Стеновая панель</a></li>
+              </ul>
+            </nav>
+            <div class="header__profile-menu">  
+              <div class="header__profile-icon">
+                <svg class="svg-icon">
+                  <use href="assets/icons/sprite.svg#icon-user"></use>
+                </svg>
+              </div>
+              <div><a class="header__username" href="mailto:vyacheslav.tyurikov@gmail.com">vyacheslav.tyurikov@gmail.com</a>
+                <ul>
+                  <li>         <a href="#">Мои заказы</a></li>
+                  <li>           <a href="#">Выход</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container-fluid">
+          <div class="breadcrumbs"><a class="breadcrumbs__link" href="/">Главная</a><span class="breadcrumbs__arrow"></span><a class="breadcrumbs__link" href="/fasad">Фасад</a><span class="breadcrumbs__arrow"></span><span>Ровный</span>
+          </div>
+        </div>
+        <section>
+          <div class="container-fluid">
+            <h1 class="title">Ровный
+            </h1>
+          </div>
+        </section>
+        <section class="items">
+          <div class="container-fluid">
+            <div class="items__row">
+              <div class="items__col-50"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
+                <p class="item__title">Рамочный
+                </p></a>
+              </div>
+              <div class="items__col-50"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
+                <p class="item__title">Рамочный
+                </p></a>
+              </div>
+            </div>
+            <div class="items__row">
+              <div class="items__col"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
+                <p class="item__title">Рамочный
+                </p></a>
+              </div>
+              <div class="items__col"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
+                <p class="item__title">Рамочный
+                </p></a>
+              </div>
+              <div class="items__col"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
+                <p class="item__title">Рамочный
+                </p></a>
+              </div>
+              <div class="items__col"><a class="item" href="#"><span class="item__image"><img src="assets/images/img.jpg" alt=""></span>
+                <p class="item__title">Рамочный
+                </p></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container-fluid">
+            <ul class="files">
+              <li><li><a class="file" href="#" download="download"><span class="file__icon"><img src="assets/icons/file.svg" alt=""></span><span class="file__name">Название файла.pdf <span>(20Kb)</span></span></a></li>
+              </li>
+              <li><li><a class="file" href="#" download="download"><span class="file__icon"><img src="assets/icons/file.svg" alt=""></span><span class="file__name">Название файла.pdf <span>(20Kb)</span></span></a></li>
+              </li>
+              <li><li><a class="file" href="#" download="download"><span class="file__icon"><img src="assets/icons/file.svg" alt=""></span><span class="file__name">Название файла.pdf <span>(20Kb)</span></span></a></li>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="container-fluid">
+            <table class="order-table">
+              <tbody>
+                <tr>
+                  <th colspan="13">Деталировка</th>
+                  <th colspan="4">Присадка под петли</th>
+                  <th> </th>
+                </tr>
+                <tr>
+                  <!-- деталировка-->
+                  <td>№</td>
+                  <td>Основа</td>
+                  <td>Декор</td>
+                  <td>Тип кромки</td>
+                  <td>Кромка</td>
+                  <td>Обратка</td>
+                  <td>Текстура</td>
+                  <td>Ширина, мм</td>
+                  <td>Высота, мм</td>
+                  <td>Ко-во</td>
+                  <td>Площадь, м2</td>
+                  <td>Вес, кг</td>
+                  <td>Стоимость, руб</td>
+                  <!-- присадка под петли-->
+                  <td>Место</td>
+                  <td>Расстояние от края</td>
+                  <td>Ко-во</td>
+                  <td>Стоимость, руб</td>
+                  <td class="edit-buttons-td"></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>-</td>
+                  <td><a class="js-fancybox color-box" href="https://calc.yumacom.ru/content/cms/files/33470.png?w=400&amp;h=400&amp;mode=crop&amp;scale=both"><img src="https://calc.yumacom.ru/content/cms/files/33470.png?w=20&amp;h=20&amp;mode=crop&amp;scale=both" alt=""><span>Color</span></a></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <!-- присадка под петли-->
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td> 
+                    <div class="circle-button create-button">
+                      <svg class="svg-icon">
+                        <use href="assets/icons/sprite.svg#icon-create"></use>
+                      </svg>
+                      <ul class="circle-button__dropdown">
+                        <li><a>Копировать</a></li>
+                        <li><a>Изменить</a></li>
+                        <li><a>Удалить</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <!-- присадка под петли-->
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td class="edit-buttons-td">
+                    <div class="edit-buttons"><a href="#" title="Копировать">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-copy"></use>
+                        </svg></a><a href="#" title="Изменить">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-edit"></use>
+                        </svg></a><a href="#" title="Удалить">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-delete"></use>
+                        </svg></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <div class="container-fluid">
+            <div class="section-form__row">
+              <div class="section-form__col">
+                <div class="form-fields">
+                  <div class="form-fields__row">
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Основа:</label>
+                        <label class="select">
+                          <select>
+                            <option>ДСП 16 мм</option>
+                            <option>МДФ 16 мм</option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field field--error">
+                        <label>Цвет пластика: </label>
+                        <div class="select-color js-choose-color" data-modal="choose-color"><a href="#">Выбрать цвет</a><img src="assets/images/color-dummy.png" alt="">
+                          <input type="hidden" name="" value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Ширина*, мм: </label>
+                        <input type="text" name="" value="">
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label> Высота*, мм: </label>
+                        <input type="text" name="" value="">
+                        <p class="messages">* с учетом кромки</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-fields__row">
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Тип кромки:</label>
+                        <label class="select">
+                          <select>
+                            <option>ПВХ / ABS</option>
+                            <option>Пластик в цвет</option>
+                            <option>Laser</option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Цвет кромки: </label>
+                        <div class="select-color js-choose-color" data-modal="choose-edge-color"><a href="#">Выбрать цвет</a><img src="assets/images/color-dummy.png" alt="">
+                          <input type="hidden" name="" value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Обратная сторона фасада:</label>
+                        <label class="select">
+                          <select>
+                            <option>Белая</option>
+                            <option>Пластик в цвет лицевой стороны</option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Присадка под петли:</label>
+                        <label class="select">
+                          <select>
+                            <option>Справа / слева</option>
+                            <option>Сверху / снизу</option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-fields__row">
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Количество:</label>
+                        <label class="select">
+                          <select>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Расстояние от края:</label>
+                        <div class="field__select-and-input">
+                          <label class="select">
+                            <select class="js-show-input">
+                              <option>100</option>
+                              <option>150</option>
+                              <option name="unique">Индивидуальный выбор</option>
+                            </select>
+                          </label>
+                          <div class="field__group">
+                            <input type="number" name="" value="" placeholder="Введите расстояние">
+                            <div class="field__cross">
+                              <svg class="svg-icon">
+                                <use href="assets/icons/sprite.svg#icon-cross2"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                      <div class="field">
+                        <label>Направление текстуры:</label>
+                        <label class="select">
+                          <select>
+                            <option>Горизонтальная</option>
+                            <option>Вертикальная</option>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-fields__col">
+                    </div>
+                  </div>
+                  <div class="form-fields__row">
+                    <div class="form-fields__col">
+                      <div class="price-module"> 
+                        <p>Стоимость фасадов: <strong>9300.00 руб.</strong></p>
+                        <p>Стоимость присадок: <strong>300.00 руб.</strong></p>
+                        <p>Итого: <strong>9600.00 руб.</strong></p>
+                        <p>Площадь: <strong>17 м2</strong></p>
+                        <p>Вес: <strong>7 кг</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-fields__row">
+                    <div class="form-fields__col">
+                      <button class="btn btn--primary">Добавить в заказ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-form__col">
+                <div class="visualization" data-width="3000" data-height="600" angle-top-left-radius="50">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="container-fluid">
+            <p class="footer__copyright">2020 © ЮМАКОМ
+            </p>
+            <ul class="footer__nav">
+              <li><a href="/poljzovateljskoe-soglashenie">Пользовательское соглашение</a></li>
+              <li><a href="/politika-konfidencialjnosti">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+      <!-- MODALS-->
+      <div class="modal" id="choose-color">
+        <div class="modal-inner modal-inner--lg">
+          <div class="modal-inner__close js-close-modal">
+            <svg class="svg-icon">
+              <use href="assets/icons/sprite.svg#icon-cross"></use>
+            </svg>
+          </div>
+          <div class="choose-color">
+            <h3 class="choose-color__title">Выбрать цвет пластика
+            </h3>
+            <form class="choose-color__search">
+              <input type="text" placeholder="Введите название цвета">
+            </form>
+            <div class="choose-color__content">
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 1
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 2
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="choose-edge-color">
+        <div class="modal-inner modal-inner--lg">
+          <div class="modal-inner__close js-close-modal">
+            <svg class="svg-icon">
+              <use href="assets/icons/sprite.svg#icon-cross"></use>
+            </svg>
+          </div>
+          <div class="choose-color">
+            <h3 class="choose-color__title">Выбрать цвет кромки
+            </h3>
+            <form class="choose-color__search">
+              <input type="text" placeholder="Введите название цвета">
+            </form>
+            <div class="choose-color__content">
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 1
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 2
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

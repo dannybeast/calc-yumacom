@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Расчет столешниц, панелей и фасадов</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="loader"><img src="assets/images/spinner.svg" alt=""></div>
+    <main class="wrapper" id="app">
+      <!-- WEBSITE-->
+      <div class="content">
+        <header class="header">
+          <div class="container-fluid"><a class="header__logo" href="/"><img src="http://calc.yumacom.ru/content/site/images/main_logo.svg"></a>
+            <p class="header__slogan">Расчет столешниц,<br> панелей и фасадов
+            </p>
+            <nav class="header__nav">
+              <ul>
+                <li class="active"><a href="/fasad">Фасад</a></li>
+                <li><a href="/stoleshnica">Столешница</a></li>
+                <li><a href="/stenovaya-panelj">Стеновая панель</a></li>
+              </ul>
+            </nav>
+            <div class="header__profile-menu">  
+              <div class="header__profile-icon">
+                <svg class="svg-icon">
+                  <use href="assets/icons/sprite.svg#icon-user"></use>
+                </svg>
+              </div>
+              <div><a class="header__username" href="mailto:vyacheslav.tyurikov@gmail.com">vyacheslav.tyurikov@gmail.com</a>
+                <ul>
+                  <li>         <a href="#">Мои заказы</a></li>
+                  <li>           <a href="#">Выход</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="auth-module">
+          <form class="auth-module__form">
+            <h3 class="auth-module__title">Регистрация
+            </h3>
+            <!-- .field--error-->
+            <div class="field">
+              <label>ФИО</label>
+              <input type="text">
+            </div>
+            <div class="field">
+              <label>Телефон</label>
+              <input type="text">
+            </div>
+            <div class="field">
+              <label>E-mail</label>
+              <input type="text">
+            </div>
+            <div class="field">
+              <label>ИНН</label>
+              <input type="text">
+            </div>
+            <div class="field">
+              <label>Организация </label>
+              <input type="text" disabled>
+            </div>
+            <div class="auth-module__buttons">
+              <button class="btn btn--primary">Регистрация
+              </button>
+              <ul>
+                <li><a href="sign.html">Войти</a></li>
+                <li><a href="forgot.html">Восстановить пароль</a></li>
+              </ul>
+            </div>
+          </form>
+        </div>
+        <footer class="footer">
+          <div class="container-fluid">
+            <p class="footer__copyright">2020 © ЮМАКОМ
+            </p>
+            <ul class="footer__nav">
+              <li><a href="/poljzovateljskoe-soglashenie">Пользовательское соглашение</a></li>
+              <li><a href="/politika-konfidencialjnosti">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+      <!-- MODALS-->
+      <div class="modal" id="choose-color">
+        <div class="modal-inner modal-inner--lg">
+          <div class="modal-inner__close js-close-modal">
+            <svg class="svg-icon">
+              <use href="assets/icons/sprite.svg#icon-cross"></use>
+            </svg>
+          </div>
+          <div class="choose-color">
+            <h3 class="choose-color__title">Выбрать цвет пластика
+            </h3>
+            <form class="choose-color__search">
+              <input type="text" placeholder="Введите название цвета">
+            </form>
+            <div class="choose-color__content">
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 1
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 2
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="choose-edge-color">
+        <div class="modal-inner modal-inner--lg">
+          <div class="modal-inner__close js-close-modal">
+            <svg class="svg-icon">
+              <use href="assets/icons/sprite.svg#icon-cross"></use>
+            </svg>
+          </div>
+          <div class="choose-color">
+            <h3 class="choose-color__title">Выбрать цвет кромки
+            </h3>
+            <form class="choose-color__search">
+              <input type="text" placeholder="Введите название цвета">
+            </form>
+            <div class="choose-color__content">
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 1
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="choose-color__collection">
+                <h4 class="choose-color__collection-title">Коллекция 2
+                </h4>
+                <ul>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                  <li class="js-color-item" data-id="1"><img src="assets/images/color-dummy.png" alt="">
+                    <p>Серый металлик</p>
+                  </li>
+                  <li class="js-color-item" data-id="2"><img src="assets/images/color-dummy-green.png" alt="">
+                    <p>Зеленый лес</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
