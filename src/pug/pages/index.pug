@@ -207,106 +207,115 @@ block content
                                     //-             a() Удалить
         +b.SECTION
             .container-fluid
-                    +b.form-fields
-                        +e.row
-                            +e.col
-                                +b.field
-                                    label Основа:
-                                    +b.LABEL.select
-                                        select
-                                            option ДСП 16 мм
-                                            option МДФ 16 мм
-                            +e.col
-                                +b.field(class="--error")
-                                    label Цвет пластика: 
-                                    +b.select-color.js-choose-color(data-modal="choose-color")
-                                        a(href='#') Выбрать цвет
-                                        img(src='assets/images/color-dummy.png', alt='')
-                                        input(type='hidden', name='', value='')
-                            +e.col
-                                +b.field
-                                    label Ширина*, мм: 
-                                    input(type='text', name='', value='')
-                            +e.col
-                                +b.field
-                                    label  Высота*, мм: 
-                                    input(type='text', name='', value='')
-                                    p.messages * с учетом кромки
-                        +e.row
-                            +e.col
-                                +b.field
-                                    label Тип кромки:
-                                    +b.LABEL.select
-                                        select
-                                            option ПВХ / ABS
-                                            option Пластик в цвет
-                                            option Laser
-                            +e.col
-                                +b.field
-                                    label Цвет кромки: 
-                                    +b.select-color.js-choose-color(data-modal="choose-edge-color")
-                                        a(href='#') Выбрать цвет
-                                        img(src='assets/images/color-dummy.png', alt='')
-                                        input(type='hidden', name='', value='')
-                        
-                            +e.col
-                                +b.field
-                                    label Обратная сторона фасада:
-                                    +b.LABEL.select
-                                        select
-                                            option Белая
-                                            option Пластик в цвет лицевой стороны
-                            +e.col
-                                +b.field
-                                    label Присадка под петли:
-                                    +b.LABEL.select
-                                        select
-                                            option Справа / слева
-                                            option Сверху / снизу
-                        +e.row
-                            
-                            +e.col
-                                +b.field
-                                    label Количество:
-                                    +b.LABEL.select
-                                        select
-                                            option 2
-                                            option 3
-                                            option 4
-                                            option 5
-                            +e.col
-                                +b.field
-                                    label Расстояние от края:
-                                    +e.select-and-input
-                                        +b.LABEL.select
-                                            select.js-show-input
-                                                option 100
-                                                option 150
-                                                option(name="unique") Индивидуальный выбор
-                                        +e.group
-                                            input(type='number', name='', value='' placeholder="Введите расстояние")
-                                            +e.cross
-                                                svg.svg-icon
-                                                    use(href='assets/icons/sprite.svg#icon-cross2')
-                            +e.col
-                                +b.field
-                                    label Направление текстуры:
-                                    +b.LABEL.select
-                                        select
-                                            option Горизонтальная
-                                            option Вертикальная
-                            +e.col
-                        +e.row
-                            +e.col
-                                +b.price-module  
-                                    p Стоимость фасадов: <strong>9300.00 руб.</strong>
-                                    p Стоимость присадок: <strong>300.00 руб.</strong>
-                                    p Итого: <strong>9600.00 руб.</strong>
-                                    p Площадь: <strong>17 м2</strong>
-                                    p Вес: <strong>7 кг</strong>
-                        +e.row
-                            +e.col
-                                +b.BUTTON.btn(class="--primary") Добавить в заказ
+                  .section-form__row
+                    .section-form__col
+                      +b.form-fields
+                          +e.row
+                              +e.col
+                                  +b.field
+                                      label Основа:
+                                      +b.LABEL.select
+                                          select
+                                              option ДСП 16 мм
+                                              option МДФ 16 мм
+                              +e.col
+                                  +b.field(class="--error")
+                                      label Цвет пластика: 
+                                      +b.select-color.js-choose-color(data-modal="choose-color")
+                                          a(href='#') Выбрать цвет
+                                          img(src='assets/images/color-dummy.png', alt='')
+                                          input(type='hidden', name='', value='')
+                              +e.col
+                                  +b.field
+                                      label Ширина*, мм: 
+                                      input(type='text', name='', value='')
+                              +e.col
+                                  +b.field
+                                      label  Высота*, мм: 
+                                      input(type='text', name='', value='')
+                                      p.messages * с учетом кромки
+                          +e.row
+                              +e.col
+                                  +b.field
+                                      label Тип кромки:
+                                      +b.LABEL.select
+                                          select
+                                              option ПВХ / ABS
+                                              option Пластик в цвет
+                                              option Laser
+                              +e.col
+                                  +b.field
+                                      label Цвет кромки: 
+                                      +b.select-color.js-choose-color(data-modal="choose-edge-color")
+                                          a(href='#') Выбрать цвет
+                                          img(src='assets/images/color-dummy.png', alt='')
+                                          input(type='hidden', name='', value='')
+                          
+                              +e.col
+                                  +b.field
+                                      label Обратная сторона фасада:
+                                      +b.LABEL.select
+                                          select
+                                              option Белая
+                                              option Пластик в цвет лицевой стороны
+                              +e.col
+                                  +b.field
+                                      label Присадка под петли:
+                                      +b.LABEL.select
+                                          select
+                                              option Справа / слева
+                                              option Сверху / снизу
+                          +e.row
+                              
+                              +e.col
+                                  +b.field
+                                      label Количество:
+                                      +b.LABEL.select
+                                          select
+                                              option 2
+                                              option 3
+                                              option 4
+                                              option 5
+                              +e.col
+                                  +b.field
+                                      label Расстояние от края:
+                                      +e.select-and-input
+                                          +b.LABEL.select
+                                              select.js-show-input
+                                                  option 100
+                                                  option 150
+                                                  option(name="unique") Индивидуальный выбор
+                                          +e.group
+                                              input(type='number', name='', value='' placeholder="Введите расстояние")
+                                              +e.cross
+                                                  svg.svg-icon
+                                                      use(href='assets/icons/sprite.svg#icon-cross2')
+                              +e.col
+                                  +b.field
+                                      label Направление текстуры:
+                                      +b.LABEL.select
+                                          select
+                                              option Горизонтальная
+                                              option Вертикальная
+                              +e.col
+                          +e.row
+                              +e.col
+                                  +b.price-module  
+                                      p Стоимость фасадов: <strong>9300.00 руб.</strong>
+                                      p Стоимость присадок: <strong>300.00 руб.</strong>
+                                      p Итого: <strong>9600.00 руб.</strong>
+                                      p Площадь: <strong>17 м2</strong>
+                                      p Вес: <strong>7 кг</strong>
+                          +e.row
+                              +e.col
+                                  +b.BUTTON.btn(class="--primary") Добавить в заказ
+                    .section-form__col
+                      +b.visualization(
+                          data-width="3000"
+                          data-height="600"
+                          angle-top-left-radius="50"
+                          
+                        )
         +b.FOOTER.footer
             .container-fluid
                 +e.P.copyright 2020 © ЮМАКОМ

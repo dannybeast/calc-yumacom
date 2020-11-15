@@ -17,7 +17,8 @@ import hideLoader from "./js/modules/loader";
 //import "@fancyapps/fancybox";
 import mobileNavigation from "./js/modules/mobileNavigation";
 import Modal from "./js/modules/modals";
-//import masks from "./js/modules/inputmasks";
+import masks from "./js/modules/inputmasks";
+import visualization from "./js/modules/visualization";
 //import Notice from "./js/modules/notifications";
 
 import search from "./js/modules/search";
@@ -25,9 +26,9 @@ import search from "./js/modules/search";
 document.addEventListener("DOMContentLoaded", function() {
   let modal = new Modal();
   mobileNavigation();
-
+  visualization();
   //$(".js-fancybox").fancybox();
-
+  masks();
   // .js-choose-color
   let currentColorField;
   $(".js-choose-color").click(function(e) {
@@ -38,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
     search();
   });
 
-  $(".js-color-item").click(function() {
+  $('body').delegate('.js-color-item','click',function() {
     let minHeight = $(this).data("min-height");
     let maxHeight = $(this).data("max-height");
     let minWidth = $(this).data("min-width");
     let maxWidth = $(this).data("max-width");
 
     let colorName = $(this)
-      .find("p")
+      .find("p:first-of-type")
       .text();
     let colorImg = $(this)
       .find("img")
@@ -53,8 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let colorId = $(this).data("id");
     currentColorField.find("a").text(colorName);
     currentColorField.find("img").attr("src", colorImg);
-    currentColorField.find("input").val(colorId).trigger('change');
-    getSuitable(currentColorField.find("input"));
+    currentColorField.find("input").val(colorId);
+    
+    let plasticInput = currentColorField.find("input[name='plastic_color']");
+    let plastic = plasticInput.length
+
+    if(plastic){
+      getSuitable(plasticInput);
+    }
     currentColorField.parents(".field").removeClass("field--error");
 
     if (minHeight || minWidth || maxHeight || maxWidth) {
@@ -75,16 +82,18 @@ document.addEventListener("DOMContentLoaded", function() {
             "/utility/get-suitable-edges",
             { plastic_color: id },
             function (result) {
-                $('suitable-edges').empty();
+                $('#suitable-edges').empty();
 
-                $(result).each(function (edge) {
+                $(result).each(function (i, edge) {
+                  
                     var item = `<li class="js-color-item" data-id="${edge.ID}">
-                            <img src="${edge.Image}?w=210&=210&mode=crop&scale=both">
-                            <p>${edge.Name}</p>
-                            <p>${edge.Description}</p>
+                            <img src="${edge.Image}?w=210&h=210&mode=crop&scale=both">
+                            <p style="margin-bottom:5px">${edge.Name}</p>
+                            <p><strong>${edge.Description}</strong></p>
                         </li>`;
 
-                    $('suitable-edges').append(item);
+                    $('#suitable-edges').append(item);
+                    
                 });
             });
   }
