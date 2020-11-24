@@ -18,7 +18,8 @@ import hideLoader from "./js/modules/loader";
 import mobileNavigation from "./js/modules/mobileNavigation";
 import Modal from "./js/modules/modals";
 import masks from "./js/modules/inputmasks";
-import visualization from "./js/modules/visualization";
+import {visualization} from "./js/modules/visualization";
+import stickySidebar from "./js/modules/stickySidebar";
 //import Notice from "./js/modules/notifications";
 
 import search from "./js/modules/search";
@@ -27,8 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
   let modal = new Modal();
   mobileNavigation();
   visualization();
+
   //$(".js-fancybox").fancybox();
   masks();
+  stickySidebar();
   // .js-choose-color
   let currentColorField;
   $(".js-choose-color").click(function(e) {

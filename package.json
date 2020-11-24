@@ -67,6 +67,7 @@
     "jquery": "^3.4.1",
     "lazyload": "^2.0.0-rc.2",
     "sass-em": "^1.0.3",
+    "sticky-sidebar": "^3.3.1",
     "svg-path-generator": "^1.1.0",
     "swiper": "^5.3.0",
     "vue": "^2.6.10",

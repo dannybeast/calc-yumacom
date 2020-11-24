@@ -309,13 +309,17 @@ block content
                           +e.row
                               +e.col
                                   +b.BUTTON.btn(class="--primary") Добавить в заказ
-                    .section-form__col
-                      +b.visualization(
-                          data-width="3000"
-                          data-height="600"
-                          angle-top-left-radius="50"
-                          
-                        )
+                    .section-form__col.js-sticky-sidebar
+                      .js-sticky-wrapper
+                        .js-sticky-block
+                          +b.visualization(
+                              v-width="3000"
+                              v-height="600"
+                              angle-top-left-radius="100"
+                              angle-top-right-radius="80"
+                              angle-bottom-left-radius="200"
+                              angle-bottom-right-slice="300,200"
+                          )
         +b.FOOTER.footer
             .container-fluid
                 +e.P.copyright 2020 © ЮМАКОМ

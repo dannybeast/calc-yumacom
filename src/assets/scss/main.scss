@@ -716,7 +716,85 @@ section,
  }
  &__col {
   @include col();
-  @include size(6);
-  @include size-md(12);
+  @include size(5);
+  @include size-notebook(6);
+  @include size-lg(12);
+  &:last-child {
+   @include size(7);
+   @include size-notebook(6);
+   @include size-lg(12);
+   @include lg-block() {
+    order: -1;
+    margin-bottom: 40px;
+   }
+  }
+ }
+}
+
+.form-fields {
+ .field label:not(.select) {
+  height: 13px;
+  display: flex;
+  align-items: flex-end;
+ }
+}
+
+.visualization {
+ padding: 20px;
+ position: relative;
+ @include sm-block() {
+  padding: 10px;
+ }
+ .v-radius {
+  position: absolute;
+  font-size: 12px;
+  --space: 50px;
+  @include sm-block() {
+   --space: 20px;
+   font-size: 10px;
+  }
+  &_top-left {
+   top: var(--space);
+   left: var(--space);
+  }
+  &_top-right {
+   top: var(--space);
+   right: var(--space);
+  }
+  &_bottom-left {
+   bottom: var(--space);
+   left: var(--space);
+  }
+  &_bottom-right {
+   bottom: var(--space);
+   right: var(--space);
+  }
+ }
+ ul {
+  li {
+   position: absolute;
+   font-size: 24px;
+   color: $primary-color;
+   @include sm-block() {
+    font-size: 14px;
+    font-weight: 500;
+   }
+   &:nth-child(1) {
+    left: 0;
+    top: 0;
+   }
+   &:nth-child(2) {
+    right: 0;
+    top: 0;
+   }
+   &:nth-child(3) {
+    right: 0;
+    bottom: 0;
+   }
+   &:nth-child(4) {
+    left: 0;
+    bottom: 0;
+   }
+  }
  }
 }
