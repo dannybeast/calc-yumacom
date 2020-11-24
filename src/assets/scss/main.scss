@@ -742,6 +742,26 @@ section,
 .visualization {
  padding: 20px;
  position: relative;
+ .roundSVG {
+  width: 20%;
+  left: 50%;
+  position: absolute;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  @include sm-block() {
+   top: 10px;
+  }
+ }
+ .roundSVG-bottom {
+  width: 20%;
+  left: 50%;
+  position: absolute;
+  bottom: 20px;
+  transform: translate(-50%, 50%);
+  @include sm-block() {
+   bottom: 10px;
+  }
+ }
  @include sm-block() {
   padding: 10px;
  }

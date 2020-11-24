@@ -17,6 +17,7 @@ export function visualization(){
       <li>4</li>
     </ul>`
 
+  let rounding = $visualization.attr('rounding');
 
   // Radius attrs
   let radiusTopLeft = $visualization.attr('angle-top-left-radius') || 0;
@@ -36,9 +37,11 @@ export function visualization(){
   $visualization.append(angleCounts);
   var draw = SVG().addTo('.visualization').size('100%', '100%').viewbox(`0 0 ${width} ${height}`)
   
-  
+
+
   drawSVG();
   drawRadiusIndicators();
+  
 
 
    function drawSVG(){  
@@ -47,6 +50,36 @@ export function visualization(){
     drawSliceAngles(sliceTopRight);
     drawSliceAngles(sliceBottomLeft);
     drawSliceAngles(sliceBottomRight);
+    drawRounding();
+  }
+
+
+  function drawRounding(){
+    if(!rounding){return}
+    var roundSvg = SVG().addTo('.visualization').viewbox(`0 0 227.2 19.7`).attr({fill : '#b73236'});
+    roundSvg.path(`M222.6,9.3C221,4.8,219.3,0,215.2,0s-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.6,7.4c-1.9,0-3.3-3.9-4.5-7.4
+	c-1.6-4.6-3.3-9.3-7.4-9.3s-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.6,7.4c-1.9,0-3.3-3.9-4.5-7.4c-1.6-4.6-3.3-9.3-7.4-9.3
+	c-4,0-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.5,7.4c-1.9,0-3.3-3.9-4.6-7.4c-1.6-4.6-3.3-9.3-7.4-9.3v0c0,0-0.1,0-0.1,0
+	c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-4,0-5.7,4.8-7.4,9.3c-1.2,3.3-2.5,7.1-4.4,7.3c-1.8-0.2-3.2-4-4.4-7.3
+	c-1.6-4.6-3.3-9.3-7.4-9.3c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-4,0-5.7,4.8-7.4,9.3c-1.2,3.3-2.5,7.1-4.4,7.3
+	c-1.8-0.2-3.2-4-4.4-7.3C101.6,4.8,99.9,0,95.8,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-4,0-5.7,4.8-7.4,9.3
+	c-1.2,3.3-2.5,7.1-4.4,7.3c-1.8-0.2-3.2-4-4.4-7.3C77.7,4.8,76,0,72,0v0c-0.1,0-0.2,0-0.3,0v0c0,0-0.1,0-0.1,0c-4,0-5.7,4.8-7.4,9.3
+	c-1.2,3.4-2.6,7.4-4.6,7.4c-1.9,0-3.3-3.9-4.5-7.4C53.4,4.8,51.7,0,47.7,0S42,4.8,40.3,9.3c-1.2,3.4-2.6,7.4-4.6,7.4
+	c-1.9,0-3.3-3.9-4.6-7.4C29.6,4.8,27.9,0,23.8,0c-4,0-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.5,7.4c-1.9,0-3.3-3.9-4.6-7.4
+	C5.7,4.8,4,0,0,0v3c1.9,0,3.3,3.9,4.6,7.4c1.6,4.6,3.3,9.3,7.4,9.3c4,0,5.7-4.8,7.4-9.3C20.5,6.9,21.9,3,23.8,3
+	c1.9,0,3.3,3.9,4.5,7.4c1.6,4.6,3.3,9.3,7.4,9.3s5.7-4.8,7.4-9.3C44.4,6.9,45.8,3,47.7,3c1.9,0,3.3,3.9,4.5,7.4
+	c1.6,4.6,3.3,9.3,7.4,9.3c4,0,5.7-4.8,7.4-9.3C68.2,6.9,69.6,3,71.6,3s3.3,3.9,4.6,7.4c1.6,4.6,3.3,9.3,7.4,9.3v0c0,0,0.1,0,0.1,0
+	c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c4,0,5.7-4.8,7.4-9.3C92.5,7,93.8,3.2,95.7,3c1.8,0.2,3.2,4,4.4,7.3c1.6,4.6,3.3,9.3,7.4,9.3
+	c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c4,0,5.7-4.8,7.4-9.3c1.2-3.3,2.5-7.1,4.4-7.3c1.8,0.2,3.2,4,4.4,7.3c1.6,4.6,3.3,9.3,7.4,9.3
+	c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c4,0,5.7-4.8,7.4-9.3c1.2-3.3,2.5-7.1,4.4-7.3c1.8,0.2,3.2,4,4.4,7.3c1.6,4.6,3.3,9.3,7.4,9.3
+	v0c0.1,0,0.2,0,0.3,0v0c0,0,0.1,0,0.1,0c4,0,5.7-4.8,7.4-9.3c1.2-3.4,2.6-7.4,4.5-7.4c1.9,0,3.3,3.9,4.5,7.4
+	c1.6,4.6,3.3,9.3,7.4,9.3s5.7-4.8,7.4-9.3c1.2-3.4,2.6-7.4,4.6-7.4c1.9,0,3.3,3.9,4.6,7.4c1.6,4.6,3.3,9.3,7.4,9.3
+	c4,0,5.7-4.8,7.4-9.3c1.2-3.4,2.6-7.4,4.6-7.4s3.3,3.9,4.6,7.4c1.6,4.6,3.3,9.3,7.4,9.3v-3C225.2,16.7,223.8,12.8,222.6,9.3z`)
+    if(rounding === "bottom"){
+      roundSvg.attr({class : 'roundSVG-bottom'});
+    }else{
+      roundSvg.attr({class : 'roundSVG'});
+    }
   }
 
   function drawRadiusIndicators(){
@@ -61,6 +94,23 @@ export function visualization(){
     }
     if(radiusBottomRight != 0){
       $visualization.append(`<div class="v-radius v-radius_bottom-right">R${radiusBottomRight}</div>`)
+    }
+  }
+
+  
+  function drawSliceIndicators(attr, w,h){
+    console.log(attr,w,h);
+    if(attr === sliceTopLeft){
+      $visualization.append(`<div class="v-radius v-radius_top-left">${w}x${h}</div>`)
+    }
+    if(attr === sliceTopRight){
+      $visualization.append(`<div class="v-radius v-radius_top-right">${w}x${h}</div>`)
+    }
+    if(attr === sliceBottomLeft){
+      $visualization.append(`<div class="v-radius v-radius_bottom-left">${w}x${h}</div>`)
+    }
+    if(attr === sliceBottomRight){
+      $visualization.append(`<div class="v-radius v-radius_bottom-right">${w}x${h}</div>`)
     }
   }
 
@@ -112,17 +162,18 @@ C${width} ${height - radiusBottomRight/2} ${width - radiusBottomRight/2} ${heigh
   }
 
   function drawSliceAngles(attr){
-
+    
     let sliceSize = $visualization.attr(attr);
     if(!sliceSize) {return}
-  
+    
     let sliceSizeArr = sliceSize.split(',')
     let w = +sliceSizeArr[0];
     let h = +sliceSizeArr[1];
     let path = generatePath(w,h, attr)
+    drawSliceIndicators(attr, w, h);
     
     draw.path(path).attr({ fill: bgColor })
-    
+  
   }
 }
 
