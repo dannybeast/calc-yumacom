@@ -547,6 +547,11 @@ section,
  }
  &__collection {
   margin-bottom: 30px;
+  &.is-hide {
+   ul {
+    display: none;
+   }
+  }
  }
  &__content {
   ul {
