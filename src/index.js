@@ -29,6 +29,15 @@ document.addEventListener("DOMContentLoaded", function() {
   mobileNavigation();
   visualization();
 
+
+  // toggle collection
+  $('.js-toggle-collection').click(function(){
+    $(this).parents('.choose-color__collection').toggleClass('is-hide');
+  });
+
+  //-
+
+
   //$(".js-fancybox").fancybox();
   masks();
   stickySidebar();
