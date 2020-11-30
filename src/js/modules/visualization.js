@@ -31,8 +31,11 @@ export function visualization(){
   let sliceBottomLeft = 'angle-bottom-left-slice';
   let sliceBottomRight = 'angle-bottom-right-slice';
 
+  // Кромка
+  let edge = $visualization.attr('edge');
+
+
   // Draw SVG
-  
   $visualization.html('');
   $visualization.append(angleCounts);
   var draw = SVG().addTo('.visualization').size('100%', '100%').viewbox(`0 0 ${width} ${height}`)
@@ -41,6 +44,7 @@ export function visualization(){
 
   drawSVG();
   drawRadiusIndicators();
+  drawEdges();
   
 
 
@@ -56,7 +60,7 @@ export function visualization(){
 
   function drawRounding(){
     if(!rounding){return}
-    var roundSvg = SVG().addTo('.visualization').viewbox(`0 0 227.2 19.7`).attr({fill : '#b73236'});
+    var roundSvg = SVG().addTo('.visualization').viewbox(`0 0 227.2 19.7`).attr({fill : '#d8c38e'});
     roundSvg.path(`M222.6,9.3C221,4.8,219.3,0,215.2,0s-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.6,7.4c-1.9,0-3.3-3.9-4.5-7.4
 	c-1.6-4.6-3.3-9.3-7.4-9.3s-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.6,7.4c-1.9,0-3.3-3.9-4.5-7.4c-1.6-4.6-3.3-9.3-7.4-9.3
 	c-4,0-5.7,4.8-7.4,9.3c-1.2,3.4-2.6,7.4-4.5,7.4c-1.9,0-3.3-3.9-4.6-7.4c-1.6-4.6-3.3-9.3-7.4-9.3v0c0,0-0.1,0-0.1,0
@@ -97,9 +101,46 @@ export function visualization(){
     }
   }
 
+  function drawEdges(){
+    if(!edge){return}
+    let edgesArr = edge.split(',')
+    edgesArr.forEach((el)=>{
+
+      switch (el){
+        case 'top':
+          $visualization.append(`<div class="edge edge_top"></div>`);
+        break
+        case 'left':
+          $visualization.append(`<div class="edge edge_left"></div>`);
+        break
+        case 'right':
+          $visualization.append(`<div class="edge edge_right"></div>`);
+        break
+        case 'bottom':
+          $visualization.append(`<div class="edge edge_bottom"></div>`);
+        break
+        case 'angle-top-left':
+          $visualization.append(`<div class="edge edge_angle-top-left"></div>`);
+        break
+        case 'angle-top-right':
+          $visualization.append(`<div class="edge edge_angle-top-right"></div>`);
+        break
+        case 'angle-bottom-left':
+          $visualization.append(`<div class="edge edge_angle-bottom-left"></div>`);
+        break
+        case 'angle-bottom-right':
+          $visualization.append(`<div class="edge edge_angle-bottom-right"></div>`);
+        break
+      }
+
+
+    })
+
+  }
+
   
   function drawSliceIndicators(attr, w,h){
-    console.log(attr,w,h);
+
     if(attr === sliceTopLeft){
       $visualization.append(`<div class="v-radius v-radius_top-left">${w}x${h}</div>`)
     }

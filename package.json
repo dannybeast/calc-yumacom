@@ -62,6 +62,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "@svgdotjs/svg.js": "^3.0.16",
     "autosize": "^4.0.2",
+    "chosen-js": "^1.8.7",
     "emergence.js": "^1.1.2",
     "imask": "^6.0.1",
     "jquery": "^3.4.1",

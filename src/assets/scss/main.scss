@@ -1,3 +1,4 @@
+@import "libs/chosen.css";
 @import "utils/fonts";
 @import "utils/vars";
 @import "utils/smart-grid";
@@ -767,6 +768,113 @@ section,
 .visualization {
  padding: 20px;
  position: relative;
+
+ .edge {
+  position: absolute;
+  z-index: 3;
+  &_top {
+   border-left: solid 2px $primary-color;
+   border-right: solid 2px $primary-color;
+   top: 12px;
+   left: 50%;
+   width: 10px;
+   height: 16px;
+   transform: translateX(-50%);
+   @include sm-block() {
+    top: 0px;
+   }
+  }
+  &_bottom {
+   border-left: solid 2px $primary-color;
+   border-right: solid 2px $primary-color;
+   bottom: 12px;
+   left: 50%;
+   width: 10px;
+   height: 16px;
+   transform: translateX(-50%);
+   @include sm-block() {
+    bottom: 0px;
+   }
+  }
+  &_right {
+   border-top: solid 2px $primary-color;
+   border-bottom: solid 2px $primary-color;
+   top: 50%;
+   right: 12px;
+   width: 15px;
+   height: 10px;
+   transform: translateY(-50%);
+   @include sm-block() {
+    right: 0px;
+   }
+  }
+  &_left {
+   border-top: solid 2px $primary-color;
+   border-bottom: solid 2px $primary-color;
+   top: 50%;
+   left: 12px;
+   width: 15px;
+   height: 10px;
+   transform: translateY(-50%);
+   @include sm-block() {
+    left: 0px;
+   }
+  }
+
+  &_angle-top-left {
+   border-top: solid 2px $primary-color;
+   border-bottom: solid 2px $primary-color;
+   top: 25px;
+   left: 25px;
+   width: 15px;
+   height: 10px;
+   transform: rotate(45deg);
+   @include sm-block() {
+    left: 8px;
+    top: 8px;
+   }
+  }
+  &_angle-top-right {
+   border-top: solid 2px $primary-color;
+   border-bottom: solid 2px $primary-color;
+   top: 25px;
+   right: 25px;
+   width: 15px;
+   height: 10px;
+   transform: rotate(-45deg);
+   @include sm-block() {
+    right: 8px;
+    top: 8px;
+   }
+  }
+  &_angle-bottom-left {
+   border-top: solid 2px $primary-color;
+   border-bottom: solid 2px $primary-color;
+   bottom: 25px;
+   left: 25px;
+   width: 15px;
+   height: 10px;
+   transform: rotate(-45deg);
+   @include sm-block() {
+    left: 8px;
+    bottom: 8px;
+   }
+  }
+  &_angle-bottom-right {
+   border-top: solid 2px $primary-color;
+   border-bottom: solid 2px $primary-color;
+   bottom: 25px;
+   right: 25px;
+   width: 15px;
+   height: 10px;
+   transform: rotate(45deg);
+   @include sm-block() {
+    right: 8px;
+    bottom: 8px;
+   }
+  }
+ }
+
  .roundSVG {
   width: 20%;
   left: 50%;
@@ -819,7 +927,7 @@ section,
   li {
    position: absolute;
    font-size: 24px;
-   color: $primary-color;
+   color: #000;
    @include sm-block() {
     font-size: 14px;
     font-weight: 500;

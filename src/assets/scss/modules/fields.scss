@@ -148,6 +148,19 @@ input[type="search"] {
  box-sizing: content-box;
 }
 
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+ height: 42px;
+ border: 1px solid #ccc;
+ outline: none;
+}
+.chosen-container-active .chosen-choices {
+ border-color: #555;
+}
+.chosen-container .chosen-results li.highlighted {
+ background: $primary-color;
+ color: #fff;
+}
+
 input:not([type="checkbox"]),
 input:not([type="radio"]),
 select,

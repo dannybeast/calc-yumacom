@@ -36,164 +36,164 @@ block content
                             li            
                                 a(href='#') Выход
         
-        .container-fluid
-            +b.breadcrumbs
+        //- .container-fluid
+        //-     +b.breadcrumbs
             
-                a.breadcrumbs__link(href='/') Главная
-                span.breadcrumbs__arrow
-                a.breadcrumbs__link(href='/fasad') Фасад
-                span.breadcrumbs__arrow
-                span Ровный
-        +b.SECTION
-            .container-fluid
-                +b.H1.title Ровный
+        //-         a.breadcrumbs__link(href='/') Главная
+        //-         span.breadcrumbs__arrow
+        //-         a.breadcrumbs__link(href='/fasad') Фасад
+        //-         span.breadcrumbs__arrow
+        //-         span Ровный
+        //- +b.SECTION
+        //-     .container-fluid
+        //-         +b.H1.title Ровный
         
-        +b.SECTION.items
-            .container-fluid
-                +e.row
-                    +e.col-50
-                        +b.A(href="#").item
-                            +e.image
-                                img(src="assets/images/img.jpg", alt="")
-                            +e.P.title Рамочный
-                    +e.col-50
-                        +b.A(href="#").item
-                            +e.image
-                                img(src="assets/images/img.jpg", alt="")
-                            +e.P.title Рамочный
-                +e.row
-                    +e.col
-                        +b.A(href="#").item
-                            +e.image
-                                img(src="assets/images/img.jpg", alt="")
-                            +e.P.title Рамочный
-                    +e.col
-                        +b.A(href="#").item
-                            +e.image
-                                img(src="assets/images/img.jpg", alt="")
-                            +e.P.title Рамочный
-                    +e.col
-                        +b.A(href="#").item
-                            +e.image
-                                img(src="assets/images/img.jpg", alt="")
-                            +e.P.title Рамочный
-                    +e.col
-                        +b.A(href="#").item
-                            +e.image
-                                img(src="assets/images/img.jpg", alt="")
-                            +e.P.title Рамочный
+        //- +b.SECTION.items
+        //-     .container-fluid
+        //-         +e.row
+        //-             +e.col-50
+        //-                 +b.A(href="#").item
+        //-                     +e.image
+        //-                         img(src="assets/images/img.jpg", alt="")
+        //-                     +e.P.title Рамочный
+        //-             +e.col-50
+        //-                 +b.A(href="#").item
+        //-                     +e.image
+        //-                         img(src="assets/images/img.jpg", alt="")
+        //-                     +e.P.title Рамочный
+        //-         +e.row
+        //-             +e.col
+        //-                 +b.A(href="#").item
+        //-                     +e.image
+        //-                         img(src="assets/images/img.jpg", alt="")
+        //-                     +e.P.title Рамочный
+        //-             +e.col
+        //-                 +b.A(href="#").item
+        //-                     +e.image
+        //-                         img(src="assets/images/img.jpg", alt="")
+        //-                     +e.P.title Рамочный
+        //-             +e.col
+        //-                 +b.A(href="#").item
+        //-                     +e.image
+        //-                         img(src="assets/images/img.jpg", alt="")
+        //-                     +e.P.title Рамочный
+        //-             +e.col
+        //-                 +b.A(href="#").item
+        //-                     +e.image
+        //-                         img(src="assets/images/img.jpg", alt="")
+        //-                     +e.P.title Рамочный
 
-        +b.SECTION
-            .container-fluid
-                +b.UL.files
-                    li
-                        +b.A(class="file" href="#" download)
-                            +e.icon
-                                img(src="assets/icons/file.svg", alt="")
-                            +e.name Название файла.pdf <span>(20Kb)</span>
-                    li
-                        +b.A(class="file" href="#" download)
-                            +e.icon
-                                img(src="assets/icons/file.svg", alt="")
-                            +e.name Название файла.pdf <span>(20Kb)</span>
-                    li
-                        +b.A(class="file" href="#" download)
-                            +e.icon
-                                img(src="assets/icons/file.svg", alt="")
-                            +e.name Название файла.pdf <span>(20Kb)</span>
-        +b.SECTION
-            .container-fluid
-                    table.order-table
-                        tbody
-                            tr
-                                th(colspan='13') Деталировка
-                                th(colspan='4') Присадка под петли
-                                th  
-                            tr
-                                // деталировка
-                                td №
-                                td Основа
-                                td Декор
-                                td Тип кромки
-                                td Кромка
-                                td Обратка
-                                td Текстура
-                                td Ширина, мм
-                                td Высота, мм
-                                td Ко-во
-                                td Площадь, м2
-                                td Вес, кг
-                                td Стоимость, руб
-                                // присадка под петли
-                                td Место
-                                td Расстояние от края
-                                td Ко-во
-                                td Стоимость, руб
-                                td.edit-buttons-td
-                            tr
-                                td 1
-                                td -
-                                td
-                                    a(href="https://calc.yumacom.ru/content/cms/files/33470.png?w=400&h=400&mode=crop&scale=both" class="js-fancybox").color-box
-                                        img(src="https://calc.yumacom.ru/content/cms/files/33470.png?w=20&h=20&mode=crop&scale=both", alt="")
-                                        span Color
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                // присадка под петли
-                                td -
-                                td -
-                                td -
-                                td -
-                                td 
-                                    +b.circle-button.create-button
-                                        svg.svg-icon
-                                            use(href='assets/icons/sprite.svg#icon-create')
-                                        +e.UL.dropdown
-                                            li
-                                                a Копировать
-                                            li
-                                                a() Изменить
-                                            li
-                                                a() Удалить
+        //- +b.SECTION
+        //-     .container-fluid
+        //-         +b.UL.files
+        //-             li
+        //-                 +b.A(class="file" href="#" download)
+        //-                     +e.icon
+        //-                         img(src="assets/icons/file.svg", alt="")
+        //-                     +e.name Название файла.pdf <span>(20Kb)</span>
+        //-             li
+        //-                 +b.A(class="file" href="#" download)
+        //-                     +e.icon
+        //-                         img(src="assets/icons/file.svg", alt="")
+        //-                     +e.name Название файла.pdf <span>(20Kb)</span>
+        //-             li
+        //-                 +b.A(class="file" href="#" download)
+        //-                     +e.icon
+        //-                         img(src="assets/icons/file.svg", alt="")
+        //-                     +e.name Название файла.pdf <span>(20Kb)</span>
+        //- +b.SECTION
+        //-     .container-fluid
+        //-             table.order-table
+        //-                 tbody
+        //-                     tr
+        //-                         th(colspan='13') Деталировка
+        //-                         th(colspan='4') Присадка под петли
+        //-                         th  
+        //-                     tr
+        //-                         // деталировка
+        //-                         td №
+        //-                         td Основа
+        //-                         td Декор
+        //-                         td Тип кромки
+        //-                         td Кромка
+        //-                         td Обратка
+        //-                         td Текстура
+        //-                         td Ширина, мм
+        //-                         td Высота, мм
+        //-                         td Ко-во
+        //-                         td Площадь, м2
+        //-                         td Вес, кг
+        //-                         td Стоимость, руб
+        //-                         // присадка под петли
+        //-                         td Место
+        //-                         td Расстояние от края
+        //-                         td Ко-во
+        //-                         td Стоимость, руб
+        //-                         td.edit-buttons-td
+        //-                     tr
+        //-                         td 1
+        //-                         td -
+        //-                         td
+        //-                             a(href="https://calc.yumacom.ru/content/cms/files/33470.png?w=400&h=400&mode=crop&scale=both" class="js-fancybox").color-box
+        //-                                 img(src="https://calc.yumacom.ru/content/cms/files/33470.png?w=20&h=20&mode=crop&scale=both", alt="")
+        //-                                 span Color
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         // присадка под петли
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td 
+        //-                             +b.circle-button.create-button
+        //-                                 svg.svg-icon
+        //-                                     use(href='assets/icons/sprite.svg#icon-create')
+        //-                                 +e.UL.dropdown
+        //-                                     li
+        //-                                         a Копировать
+        //-                                     li
+        //-                                         a() Изменить
+        //-                                     li
+        //-                                         a() Удалить
                            
-                            tr
-                                td 2
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                td -
-                                // присадка под петли
-                                td -
-                                td -
-                                td -
-                                td -
-                                td.edit-buttons-td
-                                    +b.edit-buttons
-                                        a(href="#" title="Копировать")
-                                            svg.svg-icon
-                                                use(href='assets/icons/sprite.svg#icon-copy')
-                                        a(href="#" title="Изменить")
-                                            svg.svg-icon
-                                                use(href='assets/icons/sprite.svg#icon-edit')
-                                        a(href="#" title="Удалить")
-                                            svg.svg-icon
-                                                use(href='assets/icons/sprite.svg#icon-delete')
+        //-                     tr
+        //-                         td 2
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         // присадка под петли
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td -
+        //-                         td.edit-buttons-td
+        //-                             +b.edit-buttons
+        //-                                 a(href="#" title="Копировать")
+        //-                                     svg.svg-icon
+        //-                                         use(href='assets/icons/sprite.svg#icon-copy')
+        //-                                 a(href="#" title="Изменить")
+        //-                                     svg.svg-icon
+        //-                                         use(href='assets/icons/sprite.svg#icon-edit')
+        //-                                 a(href="#" title="Удалить")
+        //-                                     svg.svg-icon
+        //-                                         use(href='assets/icons/sprite.svg#icon-delete')
                                    
                                     //- +b.circle-button.create-button
                                     //-     svg.svg-icon
@@ -234,6 +234,7 @@ block content
                                       label  Высота*, мм: 
                                       input(type='text', name='', value='')
                                       p.messages * с учетом кромки
+                              
                           +e.row
                               +e.col
                                   +b.field
@@ -298,6 +299,15 @@ block content
                                               option Горизонтальная
                                               option Вертикальная
                               +e.col
+                                +b.field
+                                  label Стороны кромления:
+                                  select.js-select(data-placeholder='Choose a Country...', multiple='', tabindex='3')
+                                    option(value='')
+                                    option(value='United States') United States
+                                    option(value='United Kingdom') United Kingdom
+                                    option(value='Afghanistan') Afghanistan
+                                    option(value='Aland Islands') Aland Islands
+                                    option(value='Albania') Albania
                           +e.row
                               +e.col
                                   +b.price-module  
@@ -320,6 +330,7 @@ block content
                               angle-bottom-left-radius="200"
                               angle-bottom-right-slice="300,200"
                               rounding="bottom"
+                              edge="top,right,left,bottom,angle-top-left,angle-top-right,angle-bottom-left,angle-bottom-right"
                           )
         +b.FOOTER.footer
             .container-fluid
