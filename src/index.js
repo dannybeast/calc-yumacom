@@ -17,6 +17,7 @@ import hideLoader from "./js/modules/loader";
 //import "@fancyapps/fancybox";
 import mobileNavigation from "./js/modules/mobileNavigation";
 import Modal from "./js/modules/modals";
+import search from "./js/modules/search";
 import masks from "./js/modules/inputmasks";
 import {visualization} from "./js/modules/visualization";
 import stickySidebar from "./js/modules/stickySidebar";
@@ -108,6 +109,15 @@ document.addEventListener("DOMContentLoaded", function() {
             });
   }
   //-
+
+
+
+  $('[data-help]').each(function(){
+    let text = $(this).data('help');
+    $(this).append(`<div class="tooltip-help">${text}</div>`)
+
+  })
+
 
   // js-show-input
   $(".js-show-input").change(function() {
