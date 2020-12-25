@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let maxHeight = $(this).data("max-height");
     let minWidth = $(this).data("min-width");
     let maxWidth = $(this).data("max-width");
+    let allow_category = $(this).data('allow-category');
 
     let colorName = $(this)
       .find("p:first-of-type")
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let plastic = plasticInput.length
 
     if(plastic){
-      getSuitable(plasticInput);
+      getSuitable(plasticInput, allow_category);
     }
     currentColorField.parents(".field").removeClass("field--error");
 
@@ -86,12 +87,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-  function getSuitable(input){
+
+  function getSuitable(input, allow_category){
     var id = input.val();
-        
+    let base_id = +$('[name="base"]').val();
         $.post(
             "/utility/get-suitable-edges",
-            { plastic_color: id },
+            { plastic_color: id, allow_category: allow_category, base_id: base_id },
             function (result) {
                 $('#suitable-edges').empty();
 
