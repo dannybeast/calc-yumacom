@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   stickySidebar();
   // .js-choose-color
   let currentColorField;
+  let allow_category;
   $(".js-choose-color").click(function(e) {
     let modalId = $(this).data("modal");
     e.preventDefault();
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let maxHeight = $(this).data("max-height");
     let minWidth = $(this).data("min-width");
     let maxWidth = $(this).data("max-width");
-    let allow_category = $(this).data('allow-category');
+    allow_category = $(this).data('allow-category');
 
     let colorName = $(this)
       .find("p:first-of-type")
@@ -87,9 +88,16 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
+  $('[name="base"]').on('change', function(){
+    getSuitable($('[name="plastic_color"]'), allow_category);
+  })
+
 
   function getSuitable(input, allow_category){
     var id = input.val();
+    if(id === ''){
+      return
+    }else{
     let base_id = +$('[name="base"]').val();
         $.post(
             "/utility/get-suitable-edges",
@@ -109,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                 });
             });
-  }
+  }}
   //-
 
 
